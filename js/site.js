@@ -5,6 +5,6 @@ import {Router, Route, IndexRoute, browserHsitory} from "react-router";
 const app = document.getElementById("app");
 
 ReactDOM.render(
-  <p> Hello World </p>,
+  <p> Yo</p>,
   app
 );
