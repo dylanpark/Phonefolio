@@ -1,0 +1,64 @@
+$imagePath: '/page/image/wallpaper.jpg';
+$colorGreen: #9acd32;
+
+.screen {
+  width: 400px;
+  height: 600px;
+  border-radius: 8%;
+  background-size: 100%; 
+
+  &-home {
+    @extend .screen;
+    background-image: url($imagePath);
+  }
+
+  &-sms {
+    @extend .screen;
+    background-color: whitesmoke;
+
+    .screen-header {
+      color: black;
+    }
+  }
+
+  &-traderev {
+    @extend .screen;
+    background-color: $colorGreen;
+
+    .screen-header {
+      color: black;
+    }
+  }
+
+  &-trifacta {
+    @extend .screen;
+    background-color: white;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 28px 0;
+    color: white;
+
+    .time {
+      margin: 18px 0 0;
+      user-select: none;
+    }
+
+    .status {
+      margin: 18px 0 0;
+      transform: translateX(20px);
+
+      i {
+        margin-right: 3px;
+      }
+
+    }
+  }
+
+  &-app {
+    color: black;
+  }
+}
+  

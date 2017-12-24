@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "strict": 0,
+        "react/no-find-dom-node": 0,
+        "react/no-unknown-property": 0
+    },
+    "globals": {
+        "document": false
+    }
+}

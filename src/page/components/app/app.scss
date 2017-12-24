@@ -1,0 +1,38 @@
+$smsLogo: '/page/image/sms.png';
+$traderevLogo: '/page/image/traderev.png';
+$trifactaLogo: '/page/image/trifacta.png';
+$githubLogo: '/page/image/github.png';
+$instagramLogo: '/page/image/instagram.png';
+
+.app {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sms {
+  background-image: url($smsLogo);
+  background-size: 100%;
+}
+
+.trifacta {
+  background-image: url($trifactaLogo);
+}
+
+.traderev {
+  background-image: url($traderevLogo);
+}
+
+.github {
+  background-image: url($githubLogo);
+}
+
+.instagram {
+  background-image: url($instagramLogo);
+  background-size: 110%;
+}

@@ -1,0 +1,39 @@
+.phone {
+  margin: 0 0 10vh;
+  background-color: black;
+  padding: 10px; 
+  border-radius: 11%;
+  border: 4px solid silver;
+  transform: perspective(400px) rotateX(10deg);
+  position: relative;
+
+  &-notch {
+    background-color: black;
+    width: 250px; 
+    height: 50px;
+    position: absolute;
+    left: 85px;
+    border-radius: 0 0 30px 30px;
+  }
+  
+  &-header {
+    display: flex;
+    justify-content: space-between; 
+    margin: 10px 30px 0;
+    color: white;
+    
+    .time {
+      margin: 18px 0 0;
+    }
+
+    .status {
+      margin: 18px 0 0;
+      transform: translateX(20px);
+
+      i {
+        margin-right: 3px;
+      }
+
+    }
+  }
+}

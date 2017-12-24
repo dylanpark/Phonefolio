@@ -1,0 +1,16 @@
+.dock-container {
+  height: 80px;
+  border-radius: 30px;
+  margin: 0 10px 10px; 
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+
+  &-inner {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
