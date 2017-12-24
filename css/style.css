@@ -196,6 +196,7 @@
 
 .view-sms .message, .view-sms .message-dylan, .view-sms .message-user {
   display: flex;
+  word-break: break-all;
   flex-shrink: 0;
   border-radius: 12px;
   width: max-content;
@@ -222,4 +223,4 @@ body {
   align-items: center;
   overflow: hidden; }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
