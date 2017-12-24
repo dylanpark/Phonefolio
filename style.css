@@ -59,7 +59,7 @@
   border-radius: 8%;
   background-size: 100%; }
   .screen-home {
-    background-image: url("/page/image/wallpaper.jpg"); }
+    background-image: url("/src/page/image/wallpaper.jpg"); }
   .screen-sms {
     background-color: whitesmoke; }
     .screen-sms .screen-header {
@@ -97,20 +97,20 @@
   background-repeat: no-repeat; }
 
 .sms {
-  background-image: url("/page/image/sms.png");
+  background-image: url("/src/page/image/sms.png");
   background-size: 100%; }
 
 .trifacta {
-  background-image: url("/page/image/trifacta.png"); }
+  background-image: url("/src/page/image/trifacta.png"); }
 
 .traderev {
-  background-image: url("/page/image/traderev.png"); }
+  background-image: url("/src/page/image/traderev.png"); }
 
 .github {
-  background-image: url("/page/image/github.png"); }
+  background-image: url("/src/page/image/github.png"); }
 
 .instagram {
-  background-image: url("/page/image/instagram.png");
+  background-image: url("/src/page/image/instagram.png");
   background-size: 110%; }
 
 .view-sms-header {
