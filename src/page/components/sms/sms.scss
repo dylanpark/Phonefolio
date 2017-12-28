@@ -1,24 +1,21 @@
+@import 'components/view/view.scss';
+
 $color-blue: #0084ff;
 $color-gray: lightgray;
 
 .view-sms {
 
   &-header {
+    @extend .view-header;
     margin: 10px 15px;
-    align-items: center;
-    display: flex;
     justify-content: center;
-    position: relative;
     border-bottom: lightgray;
 
     i {
-      position: absolute;
-      left: 0;
+      @extend .view-back;
       font-size: 40px;
-      font-weight: 100;
       transform: translateY(-10px);
       color: $color-blue;
-      cursor: pointer;
     }
   }
 
@@ -48,8 +45,8 @@ $color-gray: lightgray;
   }
   
   &-body {
-    display: flex;
-    flex-direction: column;
+    @extend .view-body;
+    border-radius: 0;
     height: 420px;
     background-color: white;
     overflow: auto;

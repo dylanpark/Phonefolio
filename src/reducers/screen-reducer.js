@@ -1,5 +1,5 @@
 import * as actions from 'constants/action';
-import apps from 'constants/app';
+import apps from 'constants/apps';
 
 const initialState = {
   app: apps.home.name

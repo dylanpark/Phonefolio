@@ -1,0 +1,26 @@
+@import 'components/view/view.scss';
+
+.view-traderev {
+  &-header {
+    @extend .view-header;
+    margin: 20px 15px 10px;
+    color: whitesmoke;
+    font-size: 24px;
+  }
+
+  i {
+    @extend .view-back;
+    color: whitesmoke;
+    font-size: 30px;
+  }
+
+  &-body {
+    @extend .view-body;
+  }
+
+  &-title {
+    font-weight: 200;
+    user-select: none;
+    margin-left: 10px;
+  }
+}

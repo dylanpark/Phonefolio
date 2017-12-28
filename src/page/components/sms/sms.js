@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SMSHeader from 'components/sms/sms-header';
+import apps from 'constants/apps';
+import AppHeader from 'components/app-header/app-header';
 import smsRespond from 'util/sms';
 
 export default class SMS extends React.Component {
@@ -53,7 +54,7 @@ export default class SMS extends React.Component {
 
     return (
       <div class='view-sms'>
-        <SMSHeader changeScreen={this.props.changeScreen}/>
+        <AppHeader app={apps.sms.name}/>
         <div class='view-sms-body'>
           {messages}
         </div>

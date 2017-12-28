@@ -1,6 +1,6 @@
 import React from 'react';
 
-import apps from 'constants/app';
+import apps from 'constants/apps';
 import getApp from 'util/getApp';
 
 export default class AppContainer extends React.Component {
