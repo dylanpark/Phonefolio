@@ -8,12 +8,10 @@ $colorGreen: #9acd32;
   background-size: 100%; 
 
   &-home {
-    @extend .screen;
     background-image: url($imagePath);
   }
 
   &-sms {
-    @extend .screen;
     background-color: whitesmoke;
 
     .screen-header {
@@ -22,16 +20,14 @@ $colorGreen: #9acd32;
   }
 
   &-traderev {
-    @extend .screen;
     background-color: $colorGreen;
 
     .screen-header {
-      color: black;
+      color: white;
     }
   }
 
   &-trifacta {
-    @extend .screen;
     background-color: white;
   }
 

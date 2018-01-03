@@ -39,7 +39,7 @@ export default class Screen extends React.Component {
   render() {
     const screenView = this.getScreen(this.props.app);
     return (
-      <div class={'screen-' + this.props.app}>
+      <div class={'screen ' + 'screen-' + this.props.app}>
         <ScreenHeader/>
         {screenView}
       </div>

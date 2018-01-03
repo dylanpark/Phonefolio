@@ -6,14 +6,13 @@ $color-gray: lightgray;
 .view-sms {
 
   &-header {
-    @extend .view-header;
+    @include view-header;
     margin: 10px 15px;
     justify-content: center;
     border-bottom: lightgray;
 
     i {
-      @extend .view-back;
-      font-size: 40px;
+      @include view-back;
       transform: translateY(-10px);
       color: $color-blue;
     }
@@ -45,7 +44,7 @@ $color-gray: lightgray;
   }
   
   &-body {
-    @extend .view-body;
+    @include view-body;
     border-radius: 0;
     height: 420px;
     background-color: white;

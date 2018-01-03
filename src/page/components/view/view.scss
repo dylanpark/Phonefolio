@@ -1,25 +1,26 @@
+@mixin view-header {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+@mixin view-back {
+  position: absolute;
+  left: 0;
+  font-weight: 100;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+@mixin view-body {
+  display: flex;
+  flex-direction: column;
+  height: 500px; 
+  border-bottom-left-radius: 32px 48px;
+  border-bottom-right-radius: 32px 48px;
+}
+
 .view {
-  &-header {
-    align-items: center;
-    display: flex;
-    position: relative;
-  }
-
-  &-back {
-    position: absolute;
-    left: 0;
-    font-weight: 100;
-    cursor: pointer;
-  }
-
-  &-body {
-    display: flex;
-    flex-direction: column;
-    height: 465px; 
-    border-bottom-left-radius: 32px 48px;
-    border-bottom-right-radius: 32px 48px;
-  }
-
   &-title-container {
     display: flex;
     margin-left: 20px; 
