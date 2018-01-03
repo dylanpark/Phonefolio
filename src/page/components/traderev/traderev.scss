@@ -2,24 +2,26 @@
 
 .view-traderev {
   &-header {
-    @extend .view-header;
+    @include view-header;
     margin: 20px 15px 10px;
     color: whitesmoke;
     font-size: 24px;
   }
 
   i {
-    @extend .view-back;
+    @include view-back;
     color: whitesmoke;
     font-size: 30px;
   }
 
   &-body {
-    @extend .view-body;
+    @include view-body;
+    background-color: whitesmoke;
   }
 
   &-title {
-    font-weight: 200;
+    font-size: 24px;
+    font-weight: 400;
     user-select: none;
     margin-left: 10px;
   }
