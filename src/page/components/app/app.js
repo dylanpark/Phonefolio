@@ -15,13 +15,20 @@ export default class App extends React.Component {
   }
 
   render() {
-    const {app, link} = this.props;
+    const {app, link, title} = this.props;
     const className = 'app ' + app;
     
-    const element = !link ? <div class={className} 
-           onClick={() => {this.launchApp(app)}}></div> : 
-           <a class={className} href={link} target='_blank'></a>;
+    const element = !link ? 
+      <div class={className} 
+           onClick={() => {this.launchApp(app)}}>
+      </div> : 
+      <a class={className} href={link} target='_blank'></a>;
 
-    return element;
+    return title ? 
+      <div class='titled-app flex-stack'> 
+        {element}
+        <span class='app-title'> {title} </span>
+      </div> :
+      element;
   }
 }

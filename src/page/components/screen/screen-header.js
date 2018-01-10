@@ -31,9 +31,9 @@ export default class ScreenHeader extends React.Component {
       <div class='screen-header'>
           <span class='time'> {this.state.time} </span>
           <span class='status'> 
-            <i class="fa fa-signal" aria-hidden="true"></i>
-            <i class="fa fa-wifi" aria-hidden="true"></i>
-            <i class="fa fa-battery-full" aria-hidden="true"></i>
+            <i class="ion-connection-bars" aria-hidden="true"></i>
+            <i class="ion-wifi" aria-hidden="true"></i>
+            <i class="ion-battery-full" aria-hidden="true"></i>
           </span>
       </div>
     );

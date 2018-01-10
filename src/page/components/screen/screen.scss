@@ -2,10 +2,10 @@ $imagePath: '/src/page/image/wallpaper.jpg';
 $colorGreen: #9acd32;
 
 .screen {
-  width: 400px;
+  width: 320px;
   height: 600px;
   border-radius: 8%;
-  background-size: 100%; 
+  background-size: cover; 
 
   &-home {
     background-image: url($imagePath);
@@ -33,21 +33,24 @@ $colorGreen: #9acd32;
 
   &-header {
     display: flex;
+    font-size: 14px;
     justify-content: space-between;
-    margin: 10px 28px 0;
+    margin: 10px 35px 0;
     color: white;
 
     .time {
-      margin: 18px 0 0;
+      font-weight: 300;
+      margin: 12px 0 0;
       user-select: none;
     }
 
     .status {
-      margin: 18px 0 0;
-      transform: translateX(20px);
+      margin: 12px 0 0;
+      transform: translateX(15px);
 
       i {
-        margin-right: 3px;
+        font-size: 16px;
+        margin-right: 5px;
       }
 
     }

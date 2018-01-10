@@ -47,6 +47,6 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({...screenActions}, dispatch);
 }
 
-const AppHeader = connect(() =>{ return {}; }, mapDispatchToProps)(AppHeaderTemplate);
+const AppHeader = connect(() => ({}), mapDispatchToProps)(AppHeaderTemplate);
 
 export default AppHeader;

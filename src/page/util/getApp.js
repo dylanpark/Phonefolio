@@ -1,13 +1,14 @@
 import React from 'react';
 import App from 'components/app/app';
 
-const getApp = function(appList, changeScreen) {
+const getApp = function(appList, changeScreen, includeTitle) {
   return appList.map(function(app, i) {
     let prop = {
-      app: app.name
+      app: app.name,
+      link: app.link,
+      title: includeTitle ? app.title : null
     };
-    prop.link = app.link;
-    return <App key={i} {...prop} changeScreen={changeScreen}/> 
+    return <App key={i} {...prop} changeScreen={changeScreen}/>;
   });
 };
 

@@ -16,6 +16,9 @@
 
   &-body {
     @include view-body;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     background-color: whitesmoke;
   }
 
@@ -24,5 +27,25 @@
     font-weight: 400;
     user-select: none;
     margin-left: 10px;
+  }
+
+  &-photo {
+    background-color: black;
+    height: 66.6px;
+    width: 100px;
+
+    &-first {
+      background-color: black;
+      height: 200px;
+      width: 300px;
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 200px;
+      background-color: blue;
+    }
   }
 }
