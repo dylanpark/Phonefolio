@@ -1,5 +1,6 @@
 @import 'components/view/view.scss';
 
+$loadingMsg: '/src/page/image/loading.gif';
 $color-blue: #0084ff;
 $color-gray: lightgray;
 
@@ -15,6 +16,7 @@ $color-gray: lightgray;
       @include view-back;
       transform: translateY(-10px);
       color: $color-blue;
+      font-size: 34px;
     }
   }
 
@@ -24,36 +26,36 @@ $color-gray: lightgray;
 
     &-logo {
       user-select: none;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 100%;
       color: white;
       background-color: gray;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 14px;
     }
     
     &-name {
       user-select: none;
       margin-top: 3px;
       text-align: center;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   
   &-body {
     @include view-body;
     border-radius: 0;
-    height: 410px;
+    height: 430px;
     background-color: white;
     overflow: auto;
   }
 
   &-input {
-    padding-top: 10px;
-    height: 55px;
+    padding-top: 15px;
+    height: 50px;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -61,8 +63,8 @@ $color-gray: lightgray;
     border-bottom-right-radius: 32px 48px;
 
     &-submit {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       border-radius: 100%;
       position: absolute;
       top: 4px;
@@ -87,7 +89,7 @@ $color-gray: lightgray;
     input {
       box-sizing: border-box;
       width: 100%;
-      height: 38px;
+      height: 33px;
       border-radius: 20px;
       box-shadow: none;
       border: 1px solid lightgray;
@@ -101,6 +103,7 @@ $color-gray: lightgray;
 
   .message {
     display: flex;
+    font-size: 14px;
     word-break: break-all;
     flex-shrink: 0;
     border-radius: 12px;
@@ -119,6 +122,18 @@ $color-gray: lightgray;
       color: white;
       background-color: $color-blue;
       align-self: flex-end
+    }
+
+    &-loading {
+      @extend .message;
+      background-color: $color-gray;
+      background-image: url($loadingMsg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: transparent;
+      width: 20px;
+      height: 16px;
     }
   }
 }

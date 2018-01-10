@@ -12,6 +12,7 @@ export default class SMS extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ canMessage: true });
     document.addEventListener('keydown', function(e) {
       let key = e.which || e.keyCode;
       if (key === 13) {
@@ -23,6 +24,10 @@ export default class SMS extends React.Component {
   }
 
   handleMessage() {
+    if (!this.state.canMessage) {
+      return;
+    }
+    this.setState({ canMessage: false });
     let smsElement = ReactDOM.findDOMNode(this);
     let smsBody = smsElement.querySelector('.view-sms-body');
     let inputEl = smsElement.querySelector('input');
@@ -38,7 +43,8 @@ export default class SMS extends React.Component {
     setTimeout(function() {
       this.props.updateSMS({message: response});
       smsBody.scrollTop = smsBody.scrollHeight;
-    }.bind(this), 300);
+      this.setState({ canMessage: true });
+    }.bind(this), 1000);
   }
 
   getMessages(smsList) {
