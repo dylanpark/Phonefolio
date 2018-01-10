@@ -1,30 +1,29 @@
+.view-title-container {
+  display: flex;
+  margin-left: 20px;
+  align-items: center; }
+
+.view-title-divider {
+  width: 2px;
+  height: 34px;
+  background-color: whitesmoke; }
+
 .phone {
   margin: 0 0 10vh;
   background-color: black;
-  padding: 10px;
+  padding: 3px 10px 10px;
   border-radius: 11%;
   border: 4px solid silver;
-  transform: perspective(400px) rotateX(10deg);
+  transform: perspective(400px) rotateX(0deg);
   position: relative; }
   .phone-notch {
     background-color: black;
-    width: 250px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
     position: absolute;
-    left: 85px;
-    border-radius: 0 0 30px 30px; }
-  .phone-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 30px 0;
-    color: white; }
-    .phone-header .time {
-      margin: 18px 0 0; }
-    .phone-header .status {
-      margin: 18px 0 0;
-      transform: translateX(20px); }
-      .phone-header .status i {
-        margin-right: 3px; }
+    left: 95px;
+    border-bottom-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px; }
 
 .dock-container {
   height: 80px;
@@ -41,23 +40,23 @@
     justify-content: space-around; }
 
 .app-container {
-  margin: 40px 35px 0;
+  margin: 40px 30px 0;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  height: 435px; }
-  .app-container .app {
-    margin-right: 30px; }
-    .app-container .app:nth-child(4n) {
+  height: 440px; }
+  .app-container .titled-app {
+    margin-right: 20px; }
+    .app-container .titled-app:nth-child(4n) {
       margin-right: 0px; }
-    .app-container .app:nth-child(n+5) {
+    .app-container .titled-app:nth-child(n+5) {
       margin-top: 25px; }
 
-.screen, .screen-home, .screen-sms, .screen-traderev, .screen-trifacta {
-  width: 400px;
+.screen {
+  width: 320px;
   height: 600px;
   border-radius: 8%;
-  background-size: 100%; }
+  background-size: cover; }
   .screen-home {
     background-image: url("/src/page/image/wallpaper.jpg"); }
   .screen-sms {
@@ -67,34 +66,45 @@
   .screen-traderev {
     background-color: #9acd32; }
     .screen-traderev .screen-header {
-      color: black; }
+      color: white; }
   .screen-trifacta {
     background-color: white; }
   .screen-header {
     display: flex;
+    font-size: 14px;
     justify-content: space-between;
-    margin: 10px 28px 0;
+    margin: 10px 35px 0;
     color: white; }
     .screen-header .time {
-      margin: 18px 0 0;
+      font-weight: 300;
+      margin: 12px 0 0;
       user-select: none; }
     .screen-header .status {
-      margin: 18px 0 0;
-      transform: translateX(20px); }
+      margin: 12px 0 0;
+      transform: translateX(15px); }
       .screen-header .status i {
-        margin-right: 3px; }
+        font-size: 16px;
+        margin-right: 5px; }
   .screen-app {
     color: black; }
 
 .app {
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 15px;
   background-color: whitesmoke;
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat; }
+  .app-title {
+    color: whitesmoke;
+    font-size: 10px;
+    font-weight: 100;
+    width: 50px;
+    text-align: center;
+    margin-top: 2px;
+    user-select: none; }
 
 .sms {
   background-image: url("/src/page/image/sms.png");
@@ -113,60 +123,134 @@
   background-image: url("/src/page/image/instagram.png");
   background-size: 110%; }
 
-.view-sms-header {
-  margin: 10px 15px;
+.view-title-container {
+  display: flex;
+  margin-left: 20px;
+  align-items: center; }
+
+.view-title-divider {
+  width: 2px;
+  height: 34px;
+  background-color: whitesmoke; }
+
+.view-traderev-header {
   align-items: center;
   display: flex;
-  justify-content: center;
   position: relative;
+  margin: 20px 15px 10px;
+  color: whitesmoke;
+  font-size: 24px; }
+
+.view-traderev i {
+  position: absolute;
+  left: 0;
+  font-weight: 100;
+  cursor: pointer;
+  font-size: 40px;
+  color: whitesmoke;
+  font-size: 30px; }
+
+.view-traderev-body {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border-bottom-left-radius: 32px 48px;
+  border-bottom-right-radius: 32px 48px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: whitesmoke; }
+
+.view-traderev-title {
+  font-size: 24px;
+  font-weight: 400;
+  user-select: none;
+  margin-left: 10px; }
+
+.view-traderev-photo {
+  background-color: black;
+  height: 66.6px;
+  width: 100px; }
+  .view-traderev-photo-first {
+    background-color: black;
+    height: 200px;
+    width: 300px; }
+  .view-traderev-photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 200px;
+    background-color: blue; }
+
+.view-title-container {
+  display: flex;
+  margin-left: 20px;
+  align-items: center; }
+
+.view-title-divider {
+  width: 2px;
+  height: 34px;
+  background-color: whitesmoke; }
+
+.view-sms-header {
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin: 10px 15px;
+  justify-content: center;
   border-bottom: lightgray; }
   .view-sms-header i {
     position: absolute;
     left: 0;
-    font-size: 40px;
     font-weight: 100;
+    cursor: pointer;
+    font-size: 40px;
     transform: translateY(-10px);
     color: #0084ff;
-    cursor: pointer; }
+    font-size: 34px; }
 
 .view-sms-contact {
   display: flex;
   flex-direction: column; }
   .view-sms-contact-logo {
     user-select: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     color: white;
     background-color: gray;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px; }
+    font-size: 14px; }
   .view-sms-contact-name {
     user-select: none;
     margin-top: 3px;
     text-align: center;
-    font-size: 14px; }
+    font-size: 12px; }
 
 .view-sms-body {
   display: flex;
   flex-direction: column;
-  height: 420px;
+  height: 500px;
+  border-bottom-left-radius: 32px 48px;
+  border-bottom-right-radius: 32px 48px;
+  border-radius: 0;
+  height: 430px;
   background-color: white;
   overflow: auto; }
 
 .view-sms-input {
-  padding-top: 10px;
-  height: 45px;
+  padding-top: 15px;
+  height: 50px;
   display: flex;
   justify-content: center;
   background-color: white;
   border-bottom-left-radius: 32px 48px;
   border-bottom-right-radius: 32px 48px; }
   .view-sms-input-submit {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 100%;
     position: absolute;
     top: 4px;
@@ -185,7 +269,7 @@
   .view-sms-input input {
     box-sizing: border-box;
     width: 100%;
-    height: 28px;
+    height: 33px;
     border-radius: 20px;
     box-shadow: none;
     border: 1px solid lightgray;
@@ -194,8 +278,9 @@
     .view-sms-input input:focus {
       outline: none; }
 
-.view-sms .message, .view-sms .message-dylan, .view-sms .message-user {
+.view-sms .message, .view-sms .message-dylan, .view-sms .message-user, .view-sms .message-loading {
   display: flex;
+  font-size: 14px;
   word-break: break-all;
   flex-shrink: 0;
   border-radius: 12px;
@@ -209,6 +294,15 @@
     color: white;
     background-color: #0084ff;
     align-self: flex-end; }
+  .view-sms .message-loading {
+    background-color: lightgray;
+    background-image: url("/src/page/image/loading.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: transparent;
+    width: 20px;
+    height: 16px; }
 
 html {
   min-height: 100vh; }
@@ -222,5 +316,12 @@ body {
   background-color: aliceblue;
   align-items: center;
   overflow: hidden; }
+
+.flex {
+  display: flex; }
+
+.flex-stack {
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
