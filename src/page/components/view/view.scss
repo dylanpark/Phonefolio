@@ -15,9 +15,9 @@
 @mixin view-body {
   display: flex;
   flex-direction: column;
-  height: 500px; 
-  border-bottom-left-radius: 32px 48px;
-  border-bottom-right-radius: 32px 48px;
+  height: 507px; 
+  border-bottom-left-radius: 32px 40px;
+  border-bottom-right-radius: 32px 40px;
 }
 
 .view {
@@ -28,7 +28,7 @@
   }
 
   &-title-divider {
-    width: 2px;
+    width: 1px;
     height: 34px;
     background-color: whitesmoke;
   }

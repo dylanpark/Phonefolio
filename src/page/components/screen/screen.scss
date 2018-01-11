@@ -6,6 +6,7 @@ $colorGreen: #9acd32;
   height: 600px;
   border-radius: 8%;
   background-size: cover; 
+  position: relative;
 
   &-home {
     background-image: url($imagePath);

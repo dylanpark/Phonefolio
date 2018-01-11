@@ -104,7 +104,7 @@ $color-gray: lightgray;
   .message {
     display: flex;
     font-size: 14px;
-    word-break: break-all;
+    word-break: normal;
     flex-shrink: 0;
     border-radius: 12px;
     width: max-content;

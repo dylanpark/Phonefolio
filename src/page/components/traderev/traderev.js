@@ -17,6 +17,36 @@ export default class TradeRev extends React.Component {
                    divider={true}/>
         <div class='view-traderev-body'>
           <PhotoBody/>
+          <div class='view-traderev-details'>
+            <div class='detail-row'>
+              <div class='bold'> Work Details </div>
+            </div>
+            <hr class='bold'/>
+            <div class='detail-row'>
+              <span> Title </span>
+              <span> Full Stack Developer — Co-op </span>
+            </div>
+            <hr/>
+            <div class='detail-row'>
+              <span> Start Date </span>
+              <span> September 5, 2017 </span>
+            </div>
+            <hr/>
+            <div class='detail-row'>
+              <span> End Date </span>
+              <span> December 22, 2017 </span>
+            </div>
+            <hr/>
+            <div class='detail-row'>
+              <span> Location </span>
+              <span> North York, Canada </span>
+            </div>
+            <hr/><div class='detail-row'>
+              <span> Tech Stack </span>
+              <span> AngularJS, Node.js, Grails, MySQL </span>
+            </div>
+            <hr/>
+          </div>
         </div>
       </div>
     );

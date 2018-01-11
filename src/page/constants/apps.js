@@ -17,7 +17,7 @@ const apps = {
   github: {
     title: 'Github',
     name: 'github',
-    link: 'https://github.com/dylanpark/'
+    link: 'https://github.com/dylanpark/dylanpark.github.io'
   },
   instagram: {
     title: 'Instagram',

@@ -1,51 +1,106 @@
 @import 'components/view/view.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$traderev1: '/src/page/image/traderev_1.png';
+$traderev2: '/src/page/image/traderev_2.png';
+$traderev3: '/src/page/image/traderev_3.png';
+$traderev4: '/src/page/image/traderev_4.gif';
 
 .view-traderev {
+  font-family: 'Roboto';
+
   &-header {
     @include view-header;
-    margin: 20px 15px 10px;
+    margin: 10px 15px;
     color: whitesmoke;
-    font-size: 24px;
+  }
+
+  &-details {
+    margin: 10px;
+
+    .bold {
+      font-weight: 800;
+    }
+
+    .detail-row {
+      margin: 10px 10px;
+      display: flex;
+
+      span {
+        font-weight: 800;
+        font-size: 13px;
+        color: black;
+      }
+
+      span:first-child {
+        color: gray;
+        font-size: 13px;
+        font-weight: 400;
+        width: 80px;
+      }
+    }
   }
 
   i {
     @include view-back;
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 24px;
   }
 
   &-body {
     @include view-body;
     display: flex;
     flex-direction: column;
+    height: 517px;
     margin: 0;
-    background-color: whitesmoke;
+    background-color: #f0f0f0;
   }
 
   &-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     user-select: none;
     margin-left: 10px;
   }
 
   &-photo {
-    background-color: black;
-    height: 66.6px;
-    width: 100px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    height: 50px;
+    width: 80px;
 
     &-first {
-      background-color: black;
-      height: 200px;
-      width: 300px;
+      @extend .view-traderev-photo;
+      background-image: url($traderev1);
+      height: 150px;
+      width: 240px;
+    }
+
+    &-second {
+      @extend .view-traderev-photo;
+      background-image: url($traderev2);
+    }
+
+    &-third {
+      @extend .view-traderev-photo;
+      background-image: url($traderev3);
+    }
+
+    &-fourth {
+      @extend .view-traderev-photo;
+      background-image: url($traderev4);
     }
 
     &-container {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      height: 200px;
+      height: 150px;
       background-color: blue;
     }
+  }
+
+  hr {
+    margin: 0;
   }
 }
