@@ -36,8 +36,7 @@ class ModalTemplate extends React.Component {
   render() {
     const { data } = this.props;
     const content = data.type === 'image' ?
-      <img onClick={(e)=>{e.stopPropagation();}} 
-           src={data.content} 
+      <img src={data.content} 
            class='modal-image'/> :
       <span class='modal-text'>{data.content}</span>
     return (
