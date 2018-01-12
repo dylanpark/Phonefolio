@@ -7,7 +7,7 @@ const hello = '(hello|hi|hey|yo|hiya|heya)';
 const how = '(how|hows)';
 const where = '(where|wher|whre|whered|wheres|were)';
 const study = '(study|studying|studyin)';
-const school = '(school|skool)';
+const school = '(school|skool|education|major)';
 const live = '(living|live|located|livin|at)';
 const work = '(werk|work|wrk|working|wrking|werking)';
 
@@ -43,8 +43,8 @@ const educationQA = {
   questions: [
     `${where} ${are}? ${you} ${study}`,
     `${where} * ${school}`,
-    `${what} is? ${your}? ${school}`,
-    `${what} is? ${your}? major`
+    `${what} do? ${you} ${study}`,
+    `${what} is? ${your}? ${school}`
   ],
   answer: ["I'm studying computer engineering at the University of Waterloo"]
 }

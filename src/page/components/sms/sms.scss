@@ -51,6 +51,10 @@ $color-gray: lightgray;
     height: 430px;
     background-color: white;
     overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   &-input {
@@ -94,7 +98,7 @@ $color-gray: lightgray;
       box-shadow: none;
       border: 1px solid lightgray;
       padding-left: 10px;
-      padding-right: 24px;
+      padding-right: 30px;
       &:focus {
         outline: none;
       }

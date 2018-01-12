@@ -32,6 +32,7 @@ export default class SMS extends React.Component {
     let smsBody = smsElement.querySelector('.view-sms-body');
     let inputEl = smsElement.querySelector('input');
     if (inputEl.value.trim() === '') {
+      this.setState({ canMessage: true });
       return;
     }
     this.props.updateSMS({message: {

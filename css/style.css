@@ -287,6 +287,8 @@
   height: 430px;
   background-color: white;
   overflow: auto; }
+  .view-sms-body::-webkit-scrollbar {
+    width: 0; }
 
 .view-sms-input {
   padding-top: 15px;
@@ -322,7 +324,7 @@
     box-shadow: none;
     border: 1px solid lightgray;
     padding-left: 10px;
-    padding-right: 24px; }
+    padding-right: 30px; }
     .view-sms-input input:focus {
       outline: none; }
 
