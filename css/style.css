@@ -1,15 +1,26 @@
-.view-title-container {
+@import url(https://fonts.googleapis.com/css?family=Roboto);.view-title-container {
   display: flex;
   margin-left: 20px;
   align-items: center; }
 
 .view-title-divider {
-  width: 2px;
+  width: 1px;
   height: 34px;
   background-color: whitesmoke; }
 
+.modal {
+  display: flex;
+  width: 320px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center; }
+
 .phone {
-  margin: 0 0 10vh;
+  margin: 0 0 5vh;
   background-color: black;
   padding: 3px 10px 10px;
   border-radius: 11%;
@@ -22,6 +33,7 @@
     height: 40px;
     position: absolute;
     left: 95px;
+    z-index: 99;
     border-bottom-left-radius: 20px 20px;
     border-bottom-right-radius: 20px 20px; }
 
@@ -56,7 +68,8 @@
   width: 320px;
   height: 600px;
   border-radius: 8%;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
   .screen-home {
     background-image: url("/src/page/image/wallpaper.jpg"); }
   .screen-sms {
@@ -129,58 +142,81 @@
   align-items: center; }
 
 .view-title-divider {
-  width: 2px;
+  width: 1px;
   height: 34px;
   background-color: whitesmoke; }
 
-.view-traderev-header {
-  align-items: center;
-  display: flex;
-  position: relative;
-  margin: 20px 15px 10px;
-  color: whitesmoke;
-  font-size: 24px; }
-
-.view-traderev i {
-  position: absolute;
-  left: 0;
-  font-weight: 100;
-  cursor: pointer;
-  font-size: 40px;
-  color: whitesmoke;
-  font-size: 30px; }
-
-.view-traderev-body {
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  border-bottom-left-radius: 32px 48px;
-  border-bottom-right-radius: 32px 48px;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: whitesmoke; }
-
-.view-traderev-title {
-  font-size: 24px;
-  font-weight: 400;
-  user-select: none;
-  margin-left: 10px; }
-
-.view-traderev-photo {
-  background-color: black;
-  height: 66.6px;
-  width: 100px; }
-  .view-traderev-photo-first {
-    background-color: black;
-    height: 200px;
-    width: 300px; }
-  .view-traderev-photo-container {
+.view-traderev {
+  font-family: 'Roboto'; }
+  .view-traderev-header {
+    align-items: center;
     display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    margin: 10px 15px;
+    color: whitesmoke; }
+  .view-traderev-details {
+    margin: 10px; }
+    .view-traderev-details .bold {
+      font-weight: 800; }
+    .view-traderev-details .detail-row {
+      margin: 10px 10px;
+      display: flex; }
+      .view-traderev-details .detail-row span {
+        font-weight: 800;
+        font-size: 13px;
+        color: black; }
+      .view-traderev-details .detail-row span:first-child {
+        color: gray;
+        font-size: 13px;
+        font-weight: 400;
+        width: 80px; }
+  .view-traderev i {
+    position: absolute;
+    left: 0;
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 40px;
+    color: whitesmoke;
+    font-size: 24px; }
+  .view-traderev-body {
+    display: flex;
     flex-direction: column;
-    height: 200px;
-    background-color: blue; }
+    height: 507px;
+    border-bottom-left-radius: 32px 40px;
+    border-bottom-right-radius: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    height: 517px;
+    margin: 0;
+    background-color: #f0f0f0; }
+  .view-traderev-title {
+    font-size: 20px;
+    font-weight: 400;
+    user-select: none;
+    margin-left: 10px; }
+  .view-traderev-photo, .view-traderev-photo-first, .view-traderev-photo-second, .view-traderev-photo-third, .view-traderev-photo-fourth {
+    background-size: 100% 100%;
+    cursor: pointer;
+    height: 50px;
+    width: 80px; }
+    .view-traderev-photo-first {
+      background-image: url("/src/page/image/traderev_1.png");
+      height: 150px;
+      width: 240px; }
+    .view-traderev-photo-second {
+      background-image: url("/src/page/image/traderev_2.png"); }
+    .view-traderev-photo-third {
+      background-image: url("/src/page/image/traderev_3.png"); }
+    .view-traderev-photo-fourth {
+      background-image: url("/src/page/image/traderev_4.gif"); }
+    .view-traderev-photo-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 150px;
+      background-color: blue; }
+  .view-traderev hr {
+    margin: 0; }
 
 .view-title-container {
   display: flex;
@@ -188,7 +224,7 @@
   align-items: center; }
 
 .view-title-divider {
-  width: 2px;
+  width: 1px;
   height: 34px;
   background-color: whitesmoke; }
 
@@ -232,9 +268,9 @@
 .view-sms-body {
   display: flex;
   flex-direction: column;
-  height: 500px;
-  border-bottom-left-radius: 32px 48px;
-  border-bottom-right-radius: 32px 48px;
+  height: 507px;
+  border-bottom-left-radius: 32px 40px;
+  border-bottom-right-radius: 32px 40px;
   border-radius: 0;
   height: 430px;
   background-color: white;
@@ -281,7 +317,7 @@
 .view-sms .message, .view-sms .message-dylan, .view-sms .message-user, .view-sms .message-loading {
   display: flex;
   font-size: 14px;
-  word-break: break-all;
+  word-break: normal;
   flex-shrink: 0;
   border-radius: 12px;
   width: max-content;

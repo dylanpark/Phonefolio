@@ -6,3 +6,11 @@ export function changeScreen(data) {
     app: data.app
   };
 }
+
+export function toggleModal(data) {
+  return {
+    type: actions.toggleModal,
+    active: data.active,
+    data: data.data
+  }
+}
