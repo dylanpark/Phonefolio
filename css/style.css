@@ -10,14 +10,32 @@
 
 .modal {
   display: flex;
-  width: 320px;
-  height: 600px;
-  background-color: rgba(0, 0, 0, 0.4);
+  width: 330px;
+  height: 605px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -5px;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  user-select: none; }
+  .modal-image {
+    max-width: 320px;
+    object-fit: cover; }
+  .modal-text {
+    max-width: 320px;
+    width: max-content; }
+  .modal-enter {
+    opacity: 0.01; }
+    .modal-enter.modal-enter-active {
+      opacity: 1;
+      transition: opacity 0.3s ease-in; }
+  .modal-exit {
+    opacity: 1; }
+    .modal-exit.modal-exit-active {
+      opacity: 0.01;
+      transition: opacity 0.3s ease-out; }
 
 .phone {
   margin: 0 0 5vh;
@@ -194,27 +212,21 @@
     font-weight: 400;
     user-select: none;
     margin-left: 10px; }
-  .view-traderev-photo, .view-traderev-photo-first, .view-traderev-photo-second, .view-traderev-photo-third, .view-traderev-photo-fourth {
+  .view-traderev-photo, .view-traderev-photo-container .photo-0 {
     background-size: 100% 100%;
+    object-fit: fill;
     cursor: pointer;
     height: 50px;
     width: 80px; }
-    .view-traderev-photo-first {
-      background-image: url("/src/page/image/traderev_1.png");
-      height: 150px;
-      width: 240px; }
-    .view-traderev-photo-second {
-      background-image: url("/src/page/image/traderev_2.png"); }
-    .view-traderev-photo-third {
-      background-image: url("/src/page/image/traderev_3.png"); }
-    .view-traderev-photo-fourth {
-      background-image: url("/src/page/image/traderev_4.gif"); }
     .view-traderev-photo-container {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       height: 150px;
       background-color: blue; }
+      .view-traderev-photo-container .photo-0 {
+        height: 150px;
+        width: 240px; }
   .view-traderev hr {
     margin: 0; }
 

@@ -2,7 +2,14 @@ import * as actions from 'constants/action';
 import apps from 'constants/apps';
 
 const initialState = {
-  app: apps.traderev.name
+  app: apps.home.name,
+  modal: {
+    active: false,
+    data: {
+      type: 'text',
+      content: null
+    }
+  }
 };
 
 function screenReducer(state=initialState, action) {
@@ -12,6 +19,15 @@ function screenReducer(state=initialState, action) {
         ...state,
         app: action.app
       };
+    }
+    case actions.toggleModal: {
+      return {
+        ...state,
+        modal: {
+          active: action.active,
+          data: action.data
+        }
+      }
     }
     default: {
       return state;

@@ -14,7 +14,7 @@ export default class SMS extends React.Component {
   componentDidMount() {
     this.setState({ canMessage: true });
     document.addEventListener('keydown', function(e) {
-      let key = e.which || e.keyCode;
+      const key = e.which || e.keyCode;
       if (key === 13) {
         this.handleMessage();
       }

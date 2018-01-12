@@ -65,31 +65,10 @@ $traderev4: '/src/page/image/traderev_4.gif';
 
   &-photo {
     background-size: 100% 100%;
+    object-fit: fill;
     cursor: pointer;
     height: 50px;
     width: 80px;
-
-    &-first {
-      @extend .view-traderev-photo;
-      background-image: url($traderev1);
-      height: 150px;
-      width: 240px;
-    }
-
-    &-second {
-      @extend .view-traderev-photo;
-      background-image: url($traderev2);
-    }
-
-    &-third {
-      @extend .view-traderev-photo;
-      background-image: url($traderev3);
-    }
-
-    &-fourth {
-      @extend .view-traderev-photo;
-      background-image: url($traderev4);
-    }
 
     &-container {
       display: flex;
@@ -97,6 +76,12 @@ $traderev4: '/src/page/image/traderev_4.gif';
       flex-direction: column;
       height: 150px;
       background-color: blue;
+
+      .photo-0 {
+        @extend .view-traderev-photo;
+        height: 150px;
+        width: 240px;
+      }
     }
   }
 

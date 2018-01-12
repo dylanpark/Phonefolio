@@ -1,28 +1,63 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as screenActions fro 'actions/screen';
+import { CSSTransition} from 'react-transition-group';
 
-export default class ModalTemplate extends React.Component {
+import * as screenActions from 'actions/screen';
+
+class ModalTemplate extends React.Component {
+  constructor() {
+    super();
+    this.closeModal = this.closeModal.bind(this);
+    this.state = { show: false };
+    setTimeout(() => {
+      this.setState({show: true});
+    }, 300);
+  }
+  
+  componentDidMount() {
+    document.addEventListener('keydown', function(e) {
+      const key = e.which || e.keyCode;
+      if (key === 27) {
+        this.closeModal();
+      }
+    }.bind(this));
+  }
+
+  closeModal() {
+    this.setState({ show: false });
+    setTimeout(() => {
+      this.props.toggleModal({
+        active: false 
+      });
+    }, 300);
+  }
+
   render() {
+    const { data } = this.props;
+    const content = data.type === 'image' ?
+      <img onClick={(e)=>{e.stopPropagation();}} 
+           src={data.content} 
+           class='modal-image'/> :
+      <span class='modal-text'>{data.content}</span>
     return (
-      <div class='modal'>
-        
-      </div>
+      <CSSTransition 
+        in={this.state.show}
+        timeout={300}
+        classNames='modal'
+        unmountOnExit>
+        <div class='modal' onClick={this.closeModal}>
+          {content} 
+        </div>
+      </CSSTransition>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    ...state
-  }
-}
-
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(actions, dispatch);
+  return bindActionCreators(screenActions, dispatch);
 }
 
-const Modal = connect(mapStateToProps, mapDispatchToProps)(ModalTemplate);
+const Modal = connect(() => ({}), mapDispatchToProps)(ModalTemplate);
 
 export default Modal;

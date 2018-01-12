@@ -7,6 +7,7 @@ import DockContainer from 'components/dock/dock-container';
 
 import MainSMS from 'components/sms/main-sms';
 import TradeRev from 'components/traderev/traderev';
+import Modal from 'components/modal/modal';
 
 export default class Screen extends React.Component {
   constructor() {
@@ -15,21 +16,20 @@ export default class Screen extends React.Component {
   }
 
   getScreen(app) {
-    const {...changeScreen} = this.props;
+    const {toggleModal, changeScreen} = this.props;
     switch(app) {
       case apps.sms.name: {
         return <MainSMS/>;
       }
       case apps.traderev.name: {
-        return <TradeRev/>;
+        return <TradeRev toggleModal={toggleModal}/>;
       }
-
       case apps.trifacta.name:
       default: {
         return (
           <div>
-            <AppContainer {...changeScreen}/>
-            <DockContainer {...changeScreen}/>
+            <AppContainer changeScreen={changeScreen}/>
+            <DockContainer changeScreen={changeScreen}/>
           </div>
         );
       }
@@ -37,11 +37,15 @@ export default class Screen extends React.Component {
   }
 
   render() {
-    const screenView = this.getScreen(this.props.app);
+    const { app, modal } = this.props;
+    const screenView = this.getScreen(app);
+    const modalElement = modal.active ? 
+      <Modal data={modal.data}/> : null;
     return (
-      <div class={'screen ' + 'screen-' + this.props.app}>
+      <div class={'screen ' + 'screen-' + app}>
         <ScreenHeader/>
         {screenView}
+        {modalElement}
       </div>
     );
   }
