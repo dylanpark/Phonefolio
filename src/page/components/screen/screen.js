@@ -22,7 +22,8 @@ export default class Screen extends React.Component {
         return <MainSMS/>;
       }
       case apps.traderev.name: {
-        return <TradeRev toggleModal={toggleModal}/>;
+        return <TradeRev changeScreen={changeScreen} 
+                         toggleModal={toggleModal}/>;
       }
       case apps.trifacta.name:
       default: {

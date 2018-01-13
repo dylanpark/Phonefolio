@@ -17,7 +17,8 @@ function screenReducer(state=initialState, action) {
     case actions.changeScreen: {
       return {
         ...state,
-        app: action.app
+        app: action.app,
+        prev: action.prev
       };
     }
     case actions.toggleModal: {

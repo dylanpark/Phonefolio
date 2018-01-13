@@ -26,10 +26,11 @@ export default class PhotoBody extends React.Component {
       return <img key={i}
                   src={imagePath + i + extension} 
                   class={'view-traderev-photo '+className+i}
-                  onClick={function(e) {
+                  onDragStart={(e) => {e.preventDefault();}}
+                  onClick={(e) => {
                     e.preventDefault();
                     this.launchModal(i, extension); 
-                  }.bind(this)}/>
+                  }}/>
     });
 
     return (

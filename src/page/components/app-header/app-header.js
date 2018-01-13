@@ -8,12 +8,13 @@ import apps from 'constants/apps';
 class AppHeaderTemplate extends React.Component {
   constructor() {
     super();
-    this.launchHome = this.launchHome.bind(this);
+    this.quitApp= this.quitApp.bind(this);
   }
 
-  launchHome() {
+  quitApp() {
+    const app = this.props.screen.prev || apps.home.name;
     this.props.changeScreen({
-      app: apps.home.name
+      app: app
     });
   }
 
@@ -36,10 +37,16 @@ class AppHeaderTemplate extends React.Component {
       <div class={'view-' + app + '-header'}>
         <i class='ion-ios-arrow-back'
            aria-hidden='true'
-           onClick={this.launchHome}></i>
+           onClick={this.quitApp}></i>
         {headerItem}
       </div>
     );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    screen: state.screen
   }
 }
 
@@ -47,6 +54,6 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({...screenActions}, dispatch);
 }
 
-const AppHeader = connect(() => ({}), mapDispatchToProps)(AppHeaderTemplate);
+const AppHeader = connect(mapStateToProps, mapDispatchToProps)(AppHeaderTemplate);
 
 export default AppHeader;
