@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import AppHeader from 'components/app-header/app-header';
 import PhotoBody from 'components/traderev/photo-body';
@@ -21,37 +21,34 @@ export default class TradeRev extends React.Component {
 }
 
 class TradeRevDetails extends React.Component {
+  constructDetails(data) {
+    return data.map((obj, i) => (
+      <Fragment key={i}>
+        <div class='detail-row'>
+          <span>{obj[0]}</span>
+          <span>{obj[1]}</span>
+        </div>
+        <hr/>
+      </Fragment>
+    ));
+  }
+
   render() {
+    const detailList = this.constructDetails([
+      ['Title', 'Full Stack Developer - Co-op'],
+      ['Start Date', 'September 5, 2017'],
+      ['End Date', 'December 22\', 2017'],
+      ['Location', 'North York, Canada'],
+      ['Tech Stack', 'AngularJS, Node.js, Grails, MySQL']
+    ]);
+
     return (
       <div class='view-traderev-details'>
         <div class='detail-row'>
           <div class='bold'> Work Details </div>
         </div>
         <hr class='bold'/>
-        <div class='detail-row'>
-          <span> Title </span>
-          <span> Full Stack Developer — Co-op </span>
-        </div>
-        <hr/>
-        <div class='detail-row'>
-          <span> Start Date </span>
-          <span> September 5, 2017 </span>
-        </div>
-        <hr/>
-        <div class='detail-row'>
-          <span> End Date </span>
-          <span> December 22, 2017 </span>
-        </div>
-        <hr/>
-        <div class='detail-row'>
-          <span> Location </span>
-          <span> North York, Canada </span>
-        </div>
-        <hr/><div class='detail-row'>
-          <span> Tech Stack </span>
-          <span> AngularJS, Node.js, Grails, MySQL </span>
-        </div>
-        <hr/>
+        {detailList}
       </div>
     );
   }
