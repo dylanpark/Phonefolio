@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 let extractCss = new ExtractTextPlugin('css/style.css');
 let generateHtml = new HtmlWebpackPlugin({ template: 'src/index.html' });
 
-module.exports = (env) => {
+module.exports = (env = {}) => {
   const debug = !env.production;  
   return {
     node: {
