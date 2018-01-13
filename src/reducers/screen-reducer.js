@@ -7,7 +7,9 @@ const initialState = {
     active: false,
     data: {
       type: 'text',
-      content: null
+      contentType: null,
+      content: null,
+      index: null
     }
   }
 };
