@@ -5,8 +5,8 @@ import getApp from 'util/getApp';
 
 export default class AppContainer extends React.Component {
   render() {
-    const appList = [apps.instagram, apps.traderev, apps.trifacta, apps.sms, apps.instagram];
-    const appViews = getApp(appList, this.props.changeScreen, true);
+
+    const appViews = null; //getApp(appList, this.props.changeScreen, true);
 
     return (
       <div class='app-container'>
