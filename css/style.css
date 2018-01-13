@@ -9,6 +9,7 @@
   background-color: whitesmoke; }
 
 .modal {
+  cursor: pointer;
   display: flex;
   width: 330px;
   height: 605px;
@@ -20,6 +21,33 @@
   justify-content: center;
   align-items: center;
   user-select: none; }
+  .modal-content {
+    cursor: default; }
+    .modal-content:hover + .modal-nav-container {
+      opacity: 0.8;
+      transition: opacity 0.2s ease-in-out; }
+  .modal-nav {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    margin-top: -30px;
+    width: 30px;
+    height: 60px;
+    color: white;
+    background-color: gray; }
+    .modal-nav-container {
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out; }
+      .modal-nav-container:hover {
+        opacity: 0.8; }
+    .modal-nav-left {
+      left: 10px; }
+    .modal-nav-right {
+      right: 10px; }
   .modal-image {
     max-width: 320px;
     object-fit: cover; }
@@ -30,12 +58,12 @@
     opacity: 0.01; }
     .modal-enter.modal-enter-active {
       opacity: 1;
-      transition: opacity 0.2s ease-in; }
+      transition: opacity 0.2s ease-out; }
   .modal-exit {
     opacity: 1; }
     .modal-exit.modal-exit-active {
       opacity: 0.01;
-      transition: opacity 0.2s ease-out; }
+      transition: opacity 0.2s ease-in; }
 
 .phone {
   margin: 0 0 5vh;
@@ -229,6 +257,7 @@
   .view-traderev-photo, .view-traderev-photo-container .photo-0 {
     background-size: 100% 100%;
     object-fit: fill;
+    background-color: lightgray;
     cursor: pointer;
     height: 50px;
     width: 80px; }
