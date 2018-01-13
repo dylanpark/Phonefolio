@@ -12,7 +12,7 @@ class ModalTemplate extends React.Component {
     this.state = { show: false };
     setTimeout(() => {
       this.setState({show: true});
-    }, 300);
+    }, 200);
   }
   
   componentDidMount() {
@@ -30,7 +30,7 @@ class ModalTemplate extends React.Component {
       this.props.toggleModal({
         active: false 
       });
-    }, 300);
+    }, 200);
   }
 
   render() {
@@ -42,7 +42,7 @@ class ModalTemplate extends React.Component {
     return (
       <CSSTransition 
         in={this.state.show}
-        timeout={300}
+        timeout={200}
         classNames='modal'
         unmountOnExit>
         <div class='modal' onClick={this.closeModal}>

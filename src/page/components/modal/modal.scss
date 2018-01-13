@@ -27,7 +27,7 @@
 
     &.modal-enter-active {
       opacity: 1;
-      transition: opacity 0.3s ease-in;
+      transition: opacity 0.2s ease-in;
     }
   }
 
@@ -36,7 +36,7 @@
 
     &.modal-exit-active {
       opacity: 0.01;
-      transition: opacity 0.3s ease-out;
+      transition: opacity 0.2s ease-out;
     }
   }
 }

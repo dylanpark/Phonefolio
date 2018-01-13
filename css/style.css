@@ -30,12 +30,12 @@
     opacity: 0.01; }
     .modal-enter.modal-enter-active {
       opacity: 1;
-      transition: opacity 0.3s ease-in; }
+      transition: opacity 0.2s ease-in; }
   .modal-exit {
     opacity: 1; }
     .modal-exit.modal-exit-active {
       opacity: 0.01;
-      transition: opacity 0.3s ease-out; }
+      transition: opacity 0.2s ease-out; }
 
 .phone {
   margin: 0 0 5vh;
