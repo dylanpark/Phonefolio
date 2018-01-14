@@ -3,6 +3,7 @@ import React from 'react';
 import apps from 'constants/apps';
 
 import Home from 'components/home/home';
+import Trifacta from 'components/trifacta/trifacta';
 import MainSMS from 'components/sms/main-sms';
 import TradeRev from 'components/traderev/traderev';
 import Modal from 'components/modal/modal';
@@ -23,7 +24,9 @@ export default class Screen extends React.Component {
         return <TradeRev changeScreen={changeScreen} 
                          toggleModal={toggleModal}/>;
       }
-      case apps.trifacta.name:
+      case apps.trifacta.name: {
+        return <Trifacta changeScreen={changeScreen}/>; 
+      }
       default: {
         return null;
       }

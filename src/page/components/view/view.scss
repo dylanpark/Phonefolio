@@ -20,14 +20,28 @@
   border-bottom-right-radius: 32px 40px;
 }
 
-.view {
-  &-title-container {
+.view-title {
+  &-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: fill;
+    margin-right: 5px;
+  }
+
+  &-container {
     display: flex;
     margin-left: 20px; 
     align-items: center;
+
+    &-center {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
-  &-title-divider {
+  &-divider {
     width: 1px;
     height: 34px;
     background-color: whitesmoke;

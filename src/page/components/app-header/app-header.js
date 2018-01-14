@@ -23,8 +23,16 @@ class AppHeaderTemplate extends React.Component {
   }
 
   render() {
-    const { app, title, divider } = this.props;
+    const { app, title, divider, link, pos, logo} = this.props;
     const divEl = divider ? <div class='view-title-divider'></div> : null;
+    const posClass = pos ? '-' + pos : '';
+    const logoEl = logo ? <img class='view-title-logo' src={logo}/> : null;
+    const headerTitle = link ? 
+      <a target='_blank' href={link} class={'view-' + app + '-title'}> 
+        {logoEl}
+        {title}
+      </a> : 
+      <div class={'view-'+app+'-title'}>{title}</div>;
     const headerItem = app === apps.sms.name ? 
       <Fragment>
         <div class='view-sms-contact'>
@@ -33,9 +41,9 @@ class AppHeaderTemplate extends React.Component {
         </div>
         <div></div>
       </Fragment> : 
-      <div class='view-title-container'>
+      <div class={'view-title-container' + posClass}>
         {divEl}
-        <div class={'view-' + app + '-title'}> {title} </div>
+        {headerTitle}
       </div>;
     return (
       <div class={'view-' + app + '-header'}>

@@ -1,0 +1,43 @@
+@import 'components/view/view.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+.view-trifacta {
+  font-family: 'Roboto Mono';
+  // display: flex;
+  // flex-direction: row-reverse;
+  // margin-top: 20px;
+
+  &-header {
+    @include view-header;
+    font-family: 'Roboto';
+    margin: 10px 15px;
+  }
+
+  &-title {
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+  }
+  
+  .ion-ios-arrow-back {
+    @include view-back;
+    color: black;
+    font-size: 24px;
+  }
+
+  &-body {
+    @include view-body;
+    display: flex;
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-size: 10px;
+    flex-direction: row;
+    height: 530px;
+  }
+}

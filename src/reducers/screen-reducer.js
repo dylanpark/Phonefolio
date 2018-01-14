@@ -2,7 +2,7 @@ import * as actions from 'constants/action';
 import apps from 'constants/apps';
 
 const initialState = {
-  app: apps.home.name,
+  app: apps.trifacta.name,
   modal: {
     active: false,
     data: {

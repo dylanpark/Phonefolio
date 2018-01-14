@@ -8,11 +8,14 @@ const apps = {
   },
   trifacta: {
     title: 'Trifacta',
-    name: 'trifacta'
+    name: 'trifacta',
+    logo: '/src/page/image/trifacta.png',
+    url: 'https://www.trifacta.com'
   },
   traderev: {
     title: 'TradeRev',
-    name: 'traderev'
+    name: 'traderev',
+    url: 'https://www.traderev.com'
   },
   github: {
     title: 'Github',

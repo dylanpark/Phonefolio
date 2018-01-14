@@ -3,8 +3,8 @@
   padding: 3px 10px 10px; 
   border-radius: 11%;
   border: 4px solid silver;
-  transform: perspective(400px) rotateX(0deg);
   position: relative;
+  user-select: none;
 
   &-notch {
     background-color: black;

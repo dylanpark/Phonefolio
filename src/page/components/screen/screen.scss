@@ -37,6 +37,9 @@ $colorGreen: #8bc33c;
 
   &-trifacta {
     background-color: white;
+    .screen-header {
+      color: black;
+    }
   }
 
   &-header {
@@ -53,7 +56,6 @@ $colorGreen: #8bc33c;
     .time {
       font-weight: 300;
       margin: 12px 0 0;
-      user-select: none;
     }
 
     .status {

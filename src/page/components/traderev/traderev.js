@@ -34,6 +34,7 @@ export default class TradeRev extends React.Component {
             <AppHeader app={apps.traderev.name} 
                        title='TRADEREV'
                        divider={true}
+                       link={apps.traderev.url}
                        changeState={this.changeState}/>
             <div class='view-traderev-body'>
               <PhotoBody toggleModal={this.props.toggleModal}/>
