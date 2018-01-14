@@ -13,9 +13,12 @@ class AppHeaderTemplate extends React.Component {
 
   quitApp() {
     const app = this.props.screen.prev || apps.home.name;
-    this.props.changeScreen({
-      app: app
-    });
+    this.props.changeState({ show: false });
+    setTimeout(() => {
+      this.props.changeScreen({
+        app: app
+      });
+    }, 200);
   }
 
   render() {

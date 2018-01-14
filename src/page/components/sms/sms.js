@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import apps from 'constants/apps';
+import Transition from 'components/transition/transition';
+import ScreenHeader from 'components/screen/screen-header';
 import AppHeader from 'components/app-header/app-header';
+import apps from 'constants/apps';
 import smsRespond from 'util/sms';
 
 export default class SMS extends React.Component {
   constructor() {
     super();
     this.handleMessage = this.handleMessage.bind(this);
+    this.changeState = this.changeState.bind(this);
+    this.state = { show: false };
+    setTimeout(() => {
+      this.setState({ show: true });
+    }, 200);
+  }
+
+  changeState(state) {
+    this.setState(state);
   }
 
   componentDidMount() {
@@ -19,8 +30,10 @@ export default class SMS extends React.Component {
         this.handleMessage();
       }
     }.bind(this));
-    let smsBody = ReactDOM.findDOMNode(this).querySelector('.view-sms-body');
-    smsBody.scrollTop = smsBody.scrollHeight;
+    setTimeout(() => {
+      let smsBody = ReactDOM.findDOMNode(this).querySelector('.view-sms-body');
+      smsBody.scrollTop = smsBody.scrollHeight;
+    }, 200);
   }
 
   handleMessage() {
@@ -60,22 +73,29 @@ export default class SMS extends React.Component {
     const messages = this.getMessages(this.props.sms);
 
     return (
-      <div class='view-sms'>
-        <AppHeader app={apps.sms.name}/>
-        <div class='view-sms-body'>
-          {messages}
-        </div>
-        <div class='view-sms-input'>
-          <div class='view-sms-input-container'>
-            <input type='text' placeholder='Message'></input>
-            <div class='view-sms-input-submit'
-                 onClick={this.handleMessage}>
-              <i class='ion-arrow-up-c' 
-                 aria-hidden='true'></i> 
+      <Transition in={this.state.show}>
+        <div class='screen screen-sms transition'>
+          <ScreenHeader/>
+          <div class='view-sms'>
+            <AppHeader 
+              changeState={this.changeState}
+              app={apps.sms.name}/>
+            <div class='view-sms-body'>
+              {messages}
+            </div>
+            <div class='view-sms-input'>
+              <div class='view-sms-input-container'>
+                <input type='text' placeholder='Message'></input>
+                <div class='view-sms-input-submit'
+                     onClick={this.handleMessage}>
+                  <i class='ion-arrow-up-c' 
+                     aria-hidden='true'></i> 
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Transition>
     );
   }
 }

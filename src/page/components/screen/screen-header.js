@@ -27,8 +27,9 @@ export default class ScreenHeader extends React.Component {
   }
 
   render() {
+    const className = this.props.app ? 'screen-header screen-header-' + this.props.app : 'screen-header';
     return (
-      <div class='screen-header'>
+      <div class={className}>
           <span class='time'> {this.state.time} </span>
           <span class='status'> 
             <i class="ion-connection-bars" aria-hidden="true"></i>
