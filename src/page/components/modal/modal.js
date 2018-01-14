@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { CSSTransition} from 'react-transition-group';
 
+import Transition from 'components/transition/transition';
 import * as screenActions from 'actions/screen';
 
 class ModalTemplate extends React.Component {
@@ -90,16 +90,12 @@ class ModalTemplate extends React.Component {
         {sourceContent}
       </span>
     return (
-      <CSSTransition 
-        in={this.state.show}
-        timeout={200}
-        classNames='modal'
-        unmountOnExit>
-        <div class='modal' onClick={this.closeModal}>
+      <Transition in={this.state.show}>
+        <div class='modal transition' onClick={this.closeModal}>
           {content} 
           {navArrows}
         </div>
-      </CSSTransition>
+      </Transition>
     );
   }
 }

@@ -62,23 +62,4 @@
     max-width: 320px;
     width: max-content;
   }
-
-  //transitions
-  &-enter {
-    opacity: 0.01;
-
-    &.modal-enter-active {
-      opacity: 1;
-      transition: opacity 0.2s ease-out;
-    }
-  }
-
-  &-exit {
-    opacity: 1;
-
-    &.modal-exit-active {
-      opacity: 0.01;
-      transition: opacity 0.2s ease-in;
-    }
-  }
 }
