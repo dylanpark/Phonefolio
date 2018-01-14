@@ -83,7 +83,8 @@ class ModalTemplate extends React.Component {
     const content = type === 'image' ?
       <img src={sourceContent} 
            class='modal-content modal-image'
-           onClick={stopBubble}/> :
+           onClick={stopBubble}
+           onDragStart={(e)=>{e.preventDefault();}}/> :
       <span class='modal-content modal-text'
             onClick={stopBubble}>
         {sourceContent}
