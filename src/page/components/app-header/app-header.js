@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as screenActions from 'actions/screen';
 
+import transition from 'constants/transition';
 import apps from 'constants/apps';
 
 class AppHeaderTemplate extends React.Component {
@@ -18,7 +19,7 @@ class AppHeaderTemplate extends React.Component {
       this.props.changeScreen({
         app: app
       });
-    }, 200);
+    }, transition.APPS);
   }
 
   render() {

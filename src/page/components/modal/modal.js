@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Transition from 'components/transition/transition';
+import transition from 'constants/transition';
 import * as screenActions from 'actions/screen';
 
 class ModalTemplate extends React.Component {
@@ -14,7 +15,7 @@ class ModalTemplate extends React.Component {
     this.state = { show: false };
     setTimeout(() => {
       this.setState({show: true});
-    }, 200);
+    }, transition.MODAL);
   }
   
   componentDidMount() {
@@ -47,7 +48,7 @@ class ModalTemplate extends React.Component {
       this.props.toggleModal({
         active: false 
       });
-    }, 200);
+    }, transition.MODAL);
   }
 
   constructState(data) {
@@ -90,7 +91,8 @@ class ModalTemplate extends React.Component {
         {sourceContent}
       </span>
     return (
-      <Transition in={this.state.show}>
+      <Transition in={this.state.show}
+                  classNames={'transition'}>
         <div class='modal transition' onClick={this.closeModal}>
           {content} 
           {navArrows}

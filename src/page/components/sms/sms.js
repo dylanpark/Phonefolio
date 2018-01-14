@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Transition from 'components/transition/transition';
 import ScreenHeader from 'components/screen/screen-header';
 import AppHeader from 'components/app-header/app-header';
+import transition from 'constants/transition';
 import apps from 'constants/apps';
 import smsRespond from 'util/sms';
 
@@ -15,7 +16,7 @@ export default class SMS extends React.Component {
     this.state = { show: false };
     setTimeout(() => {
       this.setState({ show: true });
-    }, 200);
+    }, transition.APPS);
   }
 
   changeState(state) {
@@ -33,7 +34,7 @@ export default class SMS extends React.Component {
     setTimeout(() => {
       let smsBody = ReactDOM.findDOMNode(this).querySelector('.view-sms-body');
       smsBody.scrollTop = smsBody.scrollHeight;
-    }, 200);
+    }, transition.APPS);
   }
 
   handleMessage() {
@@ -73,8 +74,9 @@ export default class SMS extends React.Component {
     const messages = this.getMessages(this.props.sms);
 
     return (
-      <Transition in={this.state.show}>
-        <div class='screen screen-sms transition'>
+      <Transition in={this.state.show}
+                  classNames={'transition-app'}>
+        <div class='screen screen-sms transition-app'>
           <ScreenHeader/>
           <div class='view-sms'>
             <AppHeader 

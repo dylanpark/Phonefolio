@@ -6,6 +6,8 @@ import Profile from 'components/traderev/profile';
 import Details from 'components/traderev/details';
 import PhotoBody from 'components/traderev/photo-body';
 import Transition from 'components/transition/transition';
+
+import transition from 'constants/transition';
 import apps from 'constants/apps';
 
 export default class TradeRev extends React.Component {
@@ -15,7 +17,7 @@ export default class TradeRev extends React.Component {
     this.state = { show: false };
     setTimeout(() => {
       this.setState({ show: true });
-    }, 200);
+    }, transition.APPS);
   }
 
   changeState(state) {
@@ -24,9 +26,10 @@ export default class TradeRev extends React.Component {
 
   render() {
     return (
-      <Transition in={this.state.show}>
-        <div class='screen screen-traderev transition'>
-           <ScreenHeader/>
+      <Transition in={this.state.show}
+                  classNames={'transition-app'}>
+        <div class='screen screen-traderev transition-app'>
+          <ScreenHeader/>
           <div class='view-traderev'>
             <AppHeader app={apps.traderev.name} 
                        title='TRADEREV'

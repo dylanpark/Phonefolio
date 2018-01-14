@@ -104,9 +104,16 @@
   height: 600px;
   border-radius: 8%;
   background-size: cover;
-  position: relative; }
+  position: absolute;
+  top: 0;
+  left: 0; }
   .screen-home {
-    background-image: url("/src/page/image/wallpaper.jpg"); }
+    background-image: url("/src/page/image/wallpaper.jpg");
+    width: 320px;
+    height: 600px;
+    border-radius: 8%;
+    background-size: cover;
+    position: relative; }
   .screen-sms {
     background-color: whitesmoke; }
     .screen-sms .screen-header {
@@ -121,8 +128,10 @@
     display: flex;
     font-size: 14px;
     justify-content: space-between;
-    margin: 10px 35px 0;
+    margin: 0px 35px;
     color: white; }
+    .screen-header-home {
+      margin: 10px 35px 0; }
     .screen-header .time {
       font-weight: 300;
       margin: 12px 0 0;
@@ -413,6 +422,18 @@
   .transition-exit.transition-exit-active {
     opacity: 0.01;
     transition: opacity 0.2s ease-in; }
+
+.transition-app-enter {
+  transform: scale(0.5); }
+  .transition-app-enter.transition-app-enter-active {
+    transform: scale(1);
+    transition: transform 0.2s ease-out; }
+
+.transition-app-exit {
+  transform: scale(1); }
+  .transition-app-exit.transition-app-exit-active {
+    transform: scale(0.5);
+    transition: transform 0.2s ease-in; }
 
 html {
   min-height: 100vh; }
