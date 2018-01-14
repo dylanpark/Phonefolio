@@ -54,19 +54,8 @@
   .modal-text {
     max-width: 320px;
     width: max-content; }
-  .modal-enter {
-    opacity: 0.01; }
-    .modal-enter.modal-enter-active {
-      opacity: 1;
-      transition: opacity 0.2s ease-out; }
-  .modal-exit {
-    opacity: 1; }
-    .modal-exit.modal-exit-active {
-      opacity: 0.01;
-      transition: opacity 0.2s ease-in; }
 
 .phone {
-  margin: 0 0 5vh;
   background-color: black;
   padding: 3px 10px 10px;
   border-radius: 11%;
@@ -413,6 +402,18 @@
     width: 20px;
     height: 16px; }
 
+.transition-enter {
+  opacity: 0.01; }
+  .transition-enter.transition-enter-active {
+    opacity: 1;
+    transition: opacity 0.2s ease-out; }
+
+.transition-exit {
+  opacity: 1; }
+  .transition-exit.transition-exit-active {
+    opacity: 0.01;
+    transition: opacity 0.2s ease-in; }
+
 html {
   min-height: 100vh; }
 
@@ -421,10 +422,11 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: center;
   background-color: aliceblue;
   align-items: center;
-  overflow: hidden; }
+  overflow: scroll; }
 
 .flex {
   display: flex; }
