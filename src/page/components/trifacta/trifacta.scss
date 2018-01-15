@@ -1,18 +1,26 @@
 @import 'components/view/view.scss';
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 
 .view-trifacta {
   font-family: 'Roboto Mono';
-  // display: flex;
-  // flex-direction: row-reverse;
-  // margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  color: #191919;
 
   &-header {
     @include view-header;
     font-family: 'Roboto';
-    margin: 10px 15px;
+    width: 50px;
+    height: 600px;
+    transform: translateX(2px);
+    background-color: #7e7e7e;
+    border-top-right-radius: 28px 50px;
+    border-bottom-right-radius: 28px 50px;
+
+    & > * {
+      transform: rotateZ(90deg);
+    }
   }
 
   &-title {
@@ -21,23 +29,134 @@
     align-items: center;
     text-decoration: none;
     font-size: 16px;
-    color: black;
+    color: white;
     font-weight: 400;
   }
   
   .ion-ios-arrow-back {
     @include view-back;
-    color: black;
+    top: 30px;
+    left: 19px;
+    color: white;
     font-size: 24px;
   }
 
   &-body {
     @include view-body;
     display: flex;
+    flex-direction: row;
     font-family: 'Roboto Mono';
     font-weight: 500;
     font-size: 10px;
-    flex-direction: row;
-    height: 530px;
+    position: relative;
+    height: 280px;
+    width: 530px;
+    transform: translateX(20px) translateY(80px) rotateZ(90deg);
+    color: #303030;
+
+    & > div {
+      // transform: rotateZ(90deg);
+    }
+
+    .index-column {
+      margin-right: 2px;
+      margin-top: 91px;
+
+      .trifacta-index {
+        padding: 2px 0;
+        margin-bottom: 0.5px;
+      }
+    }
+
+    .detail-column {
+      top: 30px;
+      left: 0;
+      width: max-content;
+    }
+    
+    .desc-column {
+      top: 170px;
+      left: 0;
+      width: max-content;
+    }
+
+    .trifacta-data {
+      border: 0.5px solid #f1f1f1;
+      border-bottom: none;
+      padding: 2px 4px;
+      user-select: text;
+      &:last-child {
+        border-bottom: 0.5px solid #f1f1f1;
+      }
+
+      &-select {
+        background-color: rgba(196, 240, 255, 0.8);
+      }
+    }
+
+    .chart {
+      display: flex;
+      justify-content: center;
+      padding: 1px 0;
+      border: 0.5px solid #f1f1f1;
+      border-bottom: none;
+
+      &-title {
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        height: 24px;
+        border: 0.5px solid #f1f1f1;
+        border-bottom: none;
+        font-family: 'Roboto';
+        justify-content: center;
+        color: black;
+        font-weight: 600;
+      }
+
+      &-header {
+        background-color: #00b3a4;
+        width: 100%;
+        height: 6px;
+      }
+
+      &-data {
+        width: 14px;
+        height: 40px;
+        background-color: #00b3a4;
+        margin-right: 1px;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        &-desc {
+          width: 20px;
+        }
+
+        &-type-detail {
+          position: absolute;
+          font-size: 7px;
+          color: gray;
+          top: 8.5px;
+          letter-spacing: 0.5px;
+          left: 15px;
+        }
+
+        &-type-desc {
+          position: absolute;
+          font-size: 7px;
+          color: gray;
+          top: 8.5px;
+          letter-spacing: 0.5px;
+          left: 155px;
+        }
+
+        &-select {
+          background-color: #008f83; 
+        }
+      }
+    }
   }
 }
+

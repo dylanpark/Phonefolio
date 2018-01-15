@@ -1,7 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);.view-title-container {
+@import url(https://fonts.googleapis.com/css?family=Roboto);@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700);.view-title-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: fill;
+  margin-right: 5px; }
+
+.view-title-container {
   display: flex;
   margin-left: 20px;
   align-items: center; }
+  .view-title-container-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .view-title-divider {
   width: 1px;
@@ -19,8 +30,7 @@
   top: -2px;
   left: -5px;
   justify-content: center;
-  align-items: center;
-  user-select: none; }
+  align-items: center; }
   .modal-content {
     cursor: default; }
     .modal-content:hover + .modal-nav-container {
@@ -32,7 +42,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 50%;
     margin-top: -30px;
     width: 30px;
@@ -45,9 +55,9 @@
       .modal-nav-container:hover {
         opacity: 0.8; }
     .modal-nav-left {
-      left: 10px; }
+      left: 5px; }
     .modal-nav-right {
-      right: 10px; }
+      right: 4.5px; }
   .modal-image {
     max-width: 320px;
     object-fit: cover; }
@@ -60,8 +70,9 @@
   padding: 3px 10px 10px;
   border-radius: 11%;
   border: 4px solid silver;
-  transform: perspective(400px) rotateX(0deg);
-  position: relative; }
+  position: relative;
+  user-select: none;
+  transition: transform 0.2s ease-in-out; }
   .phone-notch {
     background-color: black;
     width: 150px;
@@ -71,6 +82,8 @@
     z-index: 99;
     border-bottom-left-radius: 20px 20px;
     border-bottom-right-radius: 20px 20px; }
+  .phone-rotate {
+    transform: rotateZ(-90deg); }
 
 .dock-container {
   height: 80px;
@@ -123,7 +136,9 @@
     .screen-traderev .screen-header {
       color: white; }
   .screen-trifacta {
-    background-color: white; }
+    background-color: #fafafa; }
+    .screen-trifacta .screen-header {
+      color: black; }
   .screen-header {
     display: flex;
     font-size: 14px;
@@ -134,8 +149,7 @@
       margin: 10px 35px 0; }
     .screen-header .time {
       font-weight: 300;
-      margin: 12px 0 0;
-      user-select: none; }
+      margin: 12px 0 0; }
     .screen-header .status {
       margin: 12px 0 0;
       transform: translateX(15px); }
@@ -160,8 +174,7 @@
     font-weight: 100;
     width: 50px;
     text-align: center;
-    margin-top: 2px;
-    user-select: none; }
+    margin-top: 2px; }
 
 .sms {
   background-image: url("/src/page/image/sms.png");
@@ -180,10 +193,21 @@
   background-image: url("/src/page/image/instagram.png");
   background-size: 110%; }
 
+.view-title-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: fill;
+  margin-right: 5px; }
+
 .view-title-container {
   display: flex;
   margin-left: 20px;
   align-items: center; }
+  .view-title-container-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .view-title-divider {
   width: 1px;
@@ -209,15 +233,15 @@
   .view-traderev-title {
     font-size: 20px;
     font-weight: 400;
-    user-select: none;
-    margin-left: 10px; }
+    margin-left: 10px;
+    text-decoration: none;
+    color: white; }
   .view-traderev-body {
     display: flex;
     flex-direction: column;
     height: 507px;
     border-bottom-left-radius: 32px 40px;
     border-bottom-right-radius: 32px 40px;
-    user-select: none;
     display: flex;
     flex-direction: column;
     height: 517px;
@@ -287,10 +311,165 @@
     .view-traderev-details hr {
       margin: 0; }
 
+.view-title-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: fill;
+  margin-right: 5px; }
+
 .view-title-container {
   display: flex;
   margin-left: 20px;
   align-items: center; }
+  .view-title-container-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.view-title-divider {
+  width: 1px;
+  height: 34px;
+  background-color: whitesmoke; }
+
+.view-trifacta {
+  font-family: 'Roboto Mono';
+  display: flex;
+  flex-direction: row-reverse;
+  color: #191919; }
+  .view-trifacta-header {
+    align-items: center;
+    display: flex;
+    position: relative;
+    font-family: 'Roboto';
+    width: 50px;
+    height: 600px;
+    transform: translateX(2px);
+    background-color: #7e7e7e;
+    border-top-right-radius: 28px 50px;
+    border-bottom-right-radius: 28px 50px; }
+    .view-trifacta-header > * {
+      transform: rotateZ(90deg); }
+  .view-trifacta-title {
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 400; }
+  .view-trifacta .ion-ios-arrow-back {
+    position: absolute;
+    left: 0;
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 40px;
+    top: 30px;
+    left: 19px;
+    color: white;
+    font-size: 24px; }
+  .view-trifacta-body {
+    display: flex;
+    flex-direction: column;
+    height: 507px;
+    border-bottom-left-radius: 32px 40px;
+    border-bottom-right-radius: 32px 40px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-size: 10px;
+    position: relative;
+    height: 280px;
+    width: 530px;
+    transform: translateX(20px) translateY(80px) rotateZ(90deg);
+    color: #303030; }
+    .view-trifacta-body .index-column {
+      margin-right: 2px;
+      margin-top: 91px; }
+      .view-trifacta-body .index-column .trifacta-index {
+        padding: 2px 0;
+        margin-bottom: 0.5px; }
+    .view-trifacta-body .detail-column {
+      top: 30px;
+      left: 0;
+      width: max-content; }
+    .view-trifacta-body .desc-column {
+      top: 170px;
+      left: 0;
+      width: max-content; }
+    .view-trifacta-body .trifacta-data {
+      border: 0.5px solid #f1f1f1;
+      border-bottom: none;
+      padding: 2px 4px;
+      user-select: text; }
+      .view-trifacta-body .trifacta-data:last-child {
+        border-bottom: 0.5px solid #f1f1f1; }
+      .view-trifacta-body .trifacta-data-select {
+        background-color: rgba(196, 240, 255, 0.8); }
+    .view-trifacta-body .chart {
+      display: flex;
+      justify-content: center;
+      padding: 1px 0;
+      border: 0.5px solid #f1f1f1;
+      border-bottom: none; }
+      .view-trifacta-body .chart-title {
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        height: 24px;
+        border: 0.5px solid #f1f1f1;
+        border-bottom: none;
+        font-family: 'Roboto';
+        justify-content: center;
+        color: black;
+        font-weight: 600; }
+      .view-trifacta-body .chart-header {
+        background-color: #00b3a4;
+        width: 100%;
+        height: 6px; }
+      .view-trifacta-body .chart-data {
+        width: 14px;
+        height: 40px;
+        background-color: #00b3a4;
+        margin-right: 1px;
+        cursor: pointer; }
+        .view-trifacta-body .chart-data:last-child {
+          margin-right: 0px; }
+        .view-trifacta-body .chart-data-desc {
+          width: 20px; }
+        .view-trifacta-body .chart-data-type-detail {
+          position: absolute;
+          font-size: 7px;
+          color: gray;
+          top: 8.5px;
+          letter-spacing: 0.5px;
+          left: 15px; }
+        .view-trifacta-body .chart-data-type-desc {
+          position: absolute;
+          font-size: 7px;
+          color: gray;
+          top: 8.5px;
+          letter-spacing: 0.5px;
+          left: 155px; }
+        .view-trifacta-body .chart-data-select {
+          background-color: #008f83; }
+
+.view-title-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: fill;
+  margin-right: 5px; }
+
+.view-title-container {
+  display: flex;
+  margin-left: 20px;
+  align-items: center; }
+  .view-title-container-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .view-title-divider {
   width: 1px;
@@ -318,7 +497,6 @@
   display: flex;
   flex-direction: column; }
   .view-sms-contact-logo {
-    user-select: none;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -329,7 +507,6 @@
     justify-content: center;
     font-size: 14px; }
   .view-sms-contact-name {
-    user-select: none;
     margin-top: 3px;
     text-align: center;
     font-size: 12px; }
