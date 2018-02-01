@@ -6,9 +6,13 @@ $colorGreen: #8bc33c;
   height: 600px;
   border-radius: 8%;
   background-size: cover; 
-  position: absolute;
-  top: 0;
-  left: 0;
+
+  &-container {
+    transition: scale 0.1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   &-home {
     background-image: url($imagePath);

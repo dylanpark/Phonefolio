@@ -7,6 +7,7 @@ import Trifacta from 'components/trifacta/trifacta';
 import MainSMS from 'components/sms/main-sms';
 import TradeRev from 'components/traderev/traderev';
 import Modal from 'components/modal/modal';
+import ScreenContainer from 'components/screen/screen-container';
 
 export default class Screen extends React.Component {
   constructor() {
@@ -34,13 +35,17 @@ export default class Screen extends React.Component {
   }
 
   render() {
-    const { app, modal, changeScreen } = this.props;
+    const { app, modal, changeScreen, scaleApp } = this.props;
     const screenView = this.getScreen(app);
+    const horizontal = app === apps.trifacta.name;
     const modalElement = modal.active ? 
       <Modal data={modal.data}/> : null;
     return (
-      <Home changeScreen={changeScreen}>
-        {screenView}
+      <Home changeScreen={changeScreen} scaleApp={scaleApp}
+            horizontal={horizontal}>
+        <ScreenContainer>
+          {screenView}
+        </ScreenContainer>
         {modalElement}
       </Home>
     );

@@ -14,6 +14,7 @@ class PhoneTemplate extends React.Component {
         <div class='phone-notch'></div>
         <Screen app={this.props.screen.app}
                 changeScreen={this.props.changeScreen}
+                scaleApp={this.props.scaleApp}
                 toggleModal={this.props.toggleModal}
                 modal={this.props.screen.modal}/>
       </div>

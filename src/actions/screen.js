@@ -13,5 +13,12 @@ export function toggleModal(data) {
     type: actions.toggleModal,
     active: data.active,
     data: data.data
-  }
+  };
+}
+
+export function scaleApp(scale) {
+  return {
+    type: actions.scaleApp,
+    scale: scale || 1
+  };
 }
