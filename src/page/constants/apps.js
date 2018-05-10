@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const apps = {
   home: {
     name: 'home'
@@ -26,7 +28,25 @@ const apps = {
     title: 'Instagram',
     name: 'instagram',
     link: 'https://www.instagram.com/dylanpark98/'
+  },
+  resistro: {
+    title: 'Resistro',
+    name: 'resistro',
+    link: 'https://www.dylansmpark.com/resistro'
   }
 }
 
-export default apps;
+const appList = {
+  homeList: [
+    apps.instagram, 
+    apps.github
+  ],
+  dockList: [
+    apps.sms, 
+    apps.trifacta, 
+    apps.traderev, 
+    apps.resistro
+  ]
+};
+
+export default _.extend(apps, appList);

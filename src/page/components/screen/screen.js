@@ -36,13 +36,17 @@ export default class Screen extends React.Component {
 
   render() {
     const { app, modal, changeScreen, scaleApp } = this.props;
+    const props = {
+      horizontal: app === apps.trifacta.name,
+      isApp: app !== apps.home.name,
+      scaleApp,
+      changeScreen
+    };
     const screenView = this.getScreen(app);
-    const horizontal = app === apps.trifacta.name;
     const modalElement = modal.active ? 
       <Modal data={modal.data}/> : null;
     return (
-      <Home changeScreen={changeScreen} scaleApp={scaleApp}
-            horizontal={horizontal}>
+      <Home {...props}>
         <ScreenContainer>
           {screenView}
         </ScreenContainer>

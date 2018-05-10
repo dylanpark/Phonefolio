@@ -7,8 +7,7 @@ import HomeSwipe from 'components/home/home-swipe';
 
 export default class Home extends React.Component {
   render() {
-    const { children, changeScreen, scaleApp, horizontal } = this.props;
-    const isApp = children[0] ? true : false;
+    const { children, changeScreen, scaleApp, horizontal, isApp } = this.props;
     return (
       <div class='screen-home'>
         <ScreenHeader app={'home'}/>

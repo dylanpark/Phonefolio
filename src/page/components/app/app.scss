@@ -3,6 +3,7 @@ $traderevLogo: '/src/page/image/traderev.png';
 $trifactaLogo: '/src/page/image/trifacta.png';
 $githubLogo: '/src/page/image/github.png';
 $instagramLogo: '/src/page/image/instagram.png';
+$resistroLogo: '/src/page/image/resistro.png';
 
 .app {
   cursor: pointer;
@@ -44,4 +45,10 @@ $instagramLogo: '/src/page/image/instagram.png';
 .instagram {
   background-image: url($instagramLogo);
   background-size: 110%;
+}
+
+.resistro {
+  background-image: url($resistroLogo);
+  background-size: 120%;
+  background-position: 45% 45%;
 }
