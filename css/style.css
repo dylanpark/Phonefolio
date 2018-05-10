@@ -116,10 +116,12 @@
   width: 320px;
   height: 600px;
   border-radius: 8%;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0; }
+  background-size: cover; }
+  .screen-container {
+    transition: scale 0.1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0; }
   .screen-home {
     background-image: url("/src/page/image/wallpaper.jpg");
     width: 320px;
@@ -192,6 +194,11 @@
 .instagram {
   background-image: url("/src/page/image/instagram.png");
   background-size: 110%; }
+
+.resistro {
+  background-image: url("/src/page/image/resistro.png");
+  background-size: 120%;
+  background-position: 45% 45%; }
 
 .view-title-logo {
   width: 20px;
@@ -405,6 +412,8 @@
       user-select: text; }
       .view-trifacta-body .trifacta-data:last-child {
         border-bottom: 0.5px solid #f1f1f1; }
+      .view-trifacta-body .trifacta-data::selection {
+        background-color: rgba(145, 227, 255, 0.8); }
       .view-trifacta-body .trifacta-data-select {
         background-color: rgba(196, 240, 255, 0.8); }
     .view-trifacta-body .chart {
@@ -454,6 +463,28 @@
           left: 155px; }
         .view-trifacta-body .chart-data-select {
           background-color: #008f83; }
+
+.home-swipe {
+  position: absolute;
+  width: 200px;
+  left: 60px;
+  height: 18px;
+  background-color: transparent;
+  bottom: -2px;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer; }
+  .home-swipe-bar {
+    margin-top: 10px;
+    width: 100px;
+    height: 3px;
+    background-color: gray;
+    border-radius: 20%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out; }
+
+.hidden {
+  opacity: 0; }
 
 .view-title-logo {
   width: 20px;
