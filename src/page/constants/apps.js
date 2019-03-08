@@ -32,7 +32,7 @@ const apps = {
   resistro: {
     title: 'Resistro',
     name: 'resistro',
-    link: 'https://www.dylansmpark.com/resistro'
+    link: 'https://www.dylanpark.ca/resistro'
   }
 }
 
