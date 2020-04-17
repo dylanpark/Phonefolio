@@ -123,7 +123,7 @@
     top: 0;
     left: 0; }
   .screen-home {
-    background-image: url("/src/page/image/wallpaper.jpg");
+    background-image: url("./src/page/image/wallpaper.jpg");
     width: 320px;
     height: 600px;
     border-radius: 8%;
@@ -179,24 +179,24 @@
     margin-top: 2px; }
 
 .sms {
-  background-image: url("/src/page/image/sms.png");
+  background-image: url("./src/page/image/sms.png");
   background-size: 100%; }
 
 .trifacta {
-  background-image: url("/src/page/image/trifacta.png"); }
+  background-image: url("./src/page/image/trifacta.png"); }
 
 .traderev {
-  background-image: url("/src/page/image/traderev.png"); }
+  background-image: url("./src/page/image/traderev.png"); }
 
 .github {
-  background-image: url("/src/page/image/github.png"); }
+  background-image: url("./src/page/image/github.png"); }
 
 .instagram {
-  background-image: url("/src/page/image/instagram.png");
+  background-image: url("./src/page/image/instagram.png");
   background-size: 110%; }
 
 .resistro {
-  background-image: url("/src/page/image/resistro.png");
+  background-image: url("./src/page/image/resistro.png");
   background-size: 120%;
   background-position: 45% 45%; }
 
@@ -263,7 +263,7 @@
     .view-traderev-profile .profile-logo {
       width: 50px;
       height: 50px;
-      background-image: url("/src/page/image/dylanlogo.png");
+      background-image: url("./src/page/image/dylanlogo.png");
       background-size: 100% 100%;
       border-radius: 100%; }
     .view-traderev-profile .profile-name {
@@ -611,7 +611,7 @@
     align-self: flex-end; }
   .view-sms .message-loading {
     background-color: lightgray;
-    background-image: url("/src/page/image/loading.gif");
+    background-image: url("./src/page/image/loading.gif");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -664,4 +664,4 @@ body {
   display: flex;
   flex-direction: column; }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

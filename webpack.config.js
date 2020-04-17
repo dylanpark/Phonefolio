@@ -3,7 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let extractCss = new ExtractTextPlugin('css/style.css');
+let extractCss = new ExtractTextPlugin('style.css');
 let generateHtml = new HtmlWebpackPlugin({ template: 'src/index.html' });
 
 module.exports = (env = {}) => {

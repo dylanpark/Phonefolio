@@ -11,7 +11,7 @@ const apps = {
   trifacta: {
     title: 'Trifacta',
     name: 'trifacta',
-    logo: '/src/page/image/trifacta.png',
+    logo: './src/page/image/trifacta.png',
     url: 'https://www.trifacta.com'
   },
   traderev: {
@@ -32,7 +32,7 @@ const apps = {
   resistro: {
     title: 'Resistro',
     name: 'resistro',
-    link: 'https://www.dylanpark.ca/resistro'
+    link: 'https://www.dylanpark.github.io/resistro'
   }
 }
 
